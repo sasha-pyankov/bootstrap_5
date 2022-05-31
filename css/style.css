@@ -560,7 +560,7 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 100vw;
     background-color: rgb(18, 18, 20);
     height: 100vh;
-    margin-left: 0;
+    margin-left: -3px;
     padding-left: 0;
     padding-top: 104px;
     -webkit-box-pack: start;
@@ -679,15 +679,19 @@ p, h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
+.fixed-top {
+  z-index: 100;
+}
+
 /* ---------------------------------------------------------------------------------- */
 .carousel-item__img-1 {
-  background: rgba(0, 0, 0, 0.4) url(/img/home/img1.jpg) fixed top center;
+  background: rgba(0, 0, 0, 0.4) url(../img/home/img1.jpg) fixed top center;
   width: 100%;
   height: 100vh;
   background-size: cover;
 }
 .carousel-item__img-2 {
-  background: rgba(0, 0, 0, 0.4) url(/img/home/img2.jpg) fixed top center;
+  background: rgba(0, 0, 0, 0.4) url(../img/home/img2.jpg) fixed top center;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -1035,7 +1039,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* ---------------------------------------------------------------------------------- */
 .our-routes {
   padding: 57px 0 120px 0;
-  background: url(/img/route/bgr_route.png);
+  background: url(../img/route/bgr_route.png);
 }
 @media (max-width: 767.98px) {
   .our-routes {
@@ -1366,7 +1370,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ---------------------------------------------------------------------------------- */
 .test {
-  background: url(/img/route/bgr_route.png);
+  background: url(../img/route/bgr_route.png);
   background-size: cover;
   background-color: #121214;
   display: -webkit-box;
@@ -1565,7 +1569,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .team::after {
-  content: url(/img/team/bgr_left.png);
+  content: url(../img/team/bgr_left.png);
   position: absolute;
   z-index: -1;
   bottom: -22.5%;
@@ -1577,7 +1581,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .team::before {
-  content: url(/img/team/bgr_rigth.png);
+  content: url(../img/team/bgr_rigth.png);
   position: absolute;
   z-index: -1;
   top: -25%;
@@ -1670,7 +1674,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ---------------------------------------------------------------------------------- */
 .conditions {
-  background: url(/img/conditions/conditions_bgr.png) center no-repeat;
+  background: url(../img/conditions/conditions_bgr.png) center no-repeat;
   background-size: cover;
   padding: 45px 0 80px 0;
 }
@@ -1755,7 +1759,7 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 .special-offers::after {
-  content: url(/img/special_offers/baggi.png);
+  content: url(../img/special_offers/baggi.png);
   position: absolute;
   z-index: -1;
   top: -20%;
@@ -1767,7 +1771,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .special-offers::before {
-  content: url(/img/special_offers/detail.png);
+  content: url(../img/special_offers/detail.png);
   position: absolute;
   z-index: -1;
   bottom: -45%;
@@ -1808,7 +1812,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .special-offers__collumn::before {
   content: "";
-  background-image: url(/img/special_offers/item_bgr.png);
+  background-image: url(../img/special_offers/item_bgr.png);
   position: absolute;
   top: 51%;
   left: 51%;
@@ -1953,7 +1957,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* ---------------------------------------------------------------------------------- */
 .certificate {
-  background: url(/img/certificate/bgr.jpg) no-repeat;
+  background: url(../img/certificate/bgr.jpg) no-repeat;
   background-size: cover;
   padding: 50px 0 90px 0;
 }
@@ -2069,7 +2073,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .card-certificate::after {
   content: "";
-  background-image: url(/img/certificate/Frame.png);
+  background-image: url(../img/certificate/Frame.png);
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
@@ -2084,7 +2088,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .card-certificate::before {
   content: "";
-  background-image: url(/img/certificate/Vector.png);
+  background-image: url(../img/certificate/Vector.png);
   background-repeat: no-repeat;
   position: absolute;
   right: 0;
@@ -2199,7 +2203,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .questions-answers::after {
-  content: url(/img/questions-answers/detail.png);
+  content: url(../img/questions-answers/detail.png);
   position: absolute;
   z-index: 5;
   height: 50%;
@@ -2213,7 +2217,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .questions-answers::before {
-  content: url(/img/questions-answers/baggi.png);
+  content: url(../img/questions-answers/baggi.png);
   position: absolute;
   z-index: 5;
   top: -31%;
@@ -3081,7 +3085,7 @@ input::-webkit-datetime-edit-fields-wrapper {
 }
 
 .booking {
-  background: url(/img/booking/bgr.png) no-repeat;
+  background: url(../img/booking/bgr.png) no-repeat;
   background-position: center;
   background-size: cover;
   padding: 55px 0 98px 0;

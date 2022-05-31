@@ -7,12 +7,12 @@ var carousel = new bootstrap.Carousel(myCarousel, {
 })
 
 /* слайдер в блоке route */
-var myCarouse2 = document.querySelector('#carouselExampleSlidesOnly1')
-var carouse2 = new bootstrap.Carousel(myCarouse2, { 
-  interval: 400,
-  // wrap: false
-  touch: true,
-})
+// var myCarouse2 = document.querySelector('#carouselExampleSlidesOnly1')
+// var carouse2 = new bootstrap.Carousel(myCarouse2, { 
+//   interval: 400,
+//   // wrap: false
+//   touch: true,
+// })
 
 /* слайдер в блоке photo */
 const swiper = new Swiper('.swiper', {
@@ -445,54 +445,6 @@ function closePricePopup() {
     }, 100);
 }
 
-/* PopUp-extended */
-// let btn1 = document.getElementById('btnPriсe1');
-// let popUpWindowExtended = document.getElementById('popUpWindowextended');
-// let btnClose = document.getElementById('btnClose');
-// let scrollWidth = getScrollWidth();
-
-
-// btn1.onclick = function () {
-//     openPricePopupextended();
-// }
-
-// btnClose.onclick = function () {
-//     closePricePopupExtended();
-// }
-// window.onclick = function(event) {
-//     if (event.target == popUpWindowExtended) {
-//         closePricePopupExtended();
-//     }
-// }
-
-// function getScrollWidth() {
-//     let div = document.createElement('div');
-//     div.style.overflowY = 'scroll';
-//     div.style.width = '50px';
-//     div.style.height = '50px';
-//     document.body.append(div);
-//     let scrollWidth = div.offsetWidth - div.clientWidth;
-//     div.remove();
-//     return scrollWidth;
-// }
-
-// function openPricePopupextended() {
-//     document.body.classList.add('_lock');
-//     document.body.style.paddingRight = scrollWidth + 'px';
-//     popUpWindowExtended.style.display = "block";
-//     setTimeout(function() {
-//         popUpWindowExtended.classList.add('show');
-//     }, 100);
-// }
-
-// function closePricePopupExtended() {
-//     popUpWindowExtended.classList.remove('show');
-//     setTimeout(function() {
-//         popUpWindowExtended.style.display = "none";
-//         document.body.style.paddingRight = '';
-//         document.body.classList.remove('_lock');
-//     }, 100);
-// }
 
 /* input + - в popUp */
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
