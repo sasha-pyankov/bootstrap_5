@@ -1,3 +1,4 @@
+/* ---------------------------------------------------------------------------------------------------------------- */
 /* слайдер в блоке home-image */
 var myCarousel = document.querySelector('#carouselExampleSlidesOnly')
 var carousel = new bootstrap.Carousel(myCarousel, { 
@@ -5,14 +6,6 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   // wrap: false
   touch: true,
 })
-
-/* слайдер в блоке route */
-// var myCarouse2 = document.querySelector('#carouselExampleSlidesOnly1')
-// var carouse2 = new bootstrap.Carousel(myCarouse2, { 
-//   interval: 400,
-//   // wrap: false
-//   touch: true,
-// })
 
 /* слайдер в блоке photo */
 const swiper = new Swiper('.swiper', {
@@ -29,67 +22,40 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-
-  // // кастомная пагинация
-  // pagination: {
-  //   el: '.page-pagination',
-  //   type: 'bullets',
-  //   clickable: true,
-  //   bulletClass: ".page-bullet",
-  //   bulletActiveClass: ".page-bullet_active",
-  // },
-
   // Navigation arrows
   navigation: {
     nextEl: '.mini-slaider__previous',
     prevEl: '.mini-slaider__next',
   },
-
   // базовый скролл
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-
   // Количество слайдев для показа
   slidesPerView: 3.5,
-
    // Отступ между слайдами
    spaceBetween: 50,
-
    // Активный слайд по центру
    centeredSlides: true,
-
    // Стартовый слайд
    initialSlide: 0,
-
     // Паралакс
    parallax: true,
-
    // Упарвление клавиатурой
    keyboard: {
      enabled: true,
      onlyInViewport: true,
      pageUpDown: true,
    },
-
-    // Упарвление колесом мыши
-    // mousewheel: {
-    //   sensitivity: 1,
-    // },
-
-    // Отключение функционала, если слайдов меньше чем нужно
-    watchOverflow: true,
-    
-    // Обновить свайпер при изменении элементов свайпера
-    observer: true,
-
-    // Обновить свайпер при изменении дочерних элементов свайпера
-    observeSlideChildren: true,
-
-    // Обновить свайпер при изменении родительских элементов свайпера
-    observeParents: true,
-
-   // Увеличение центральной картинки
+  // Отключение функционала, если слайдов меньше чем нужно
+  watchOverflow: true,
+  // Обновить свайпер при изменении элементов свайпера
+  observer: true,
+  // Обновить свайпер при изменении дочерних элементов свайпера
+  observeSlideChildren: true,
+  // Обновить свайпер при изменении родительских элементов свайпера
+  observeParents: true,
+  // Увеличение центральной картинки
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 0,
@@ -98,7 +64,6 @@ const swiper = new Swiper('.swiper', {
     modifier: 100,
     slideShadows: false,
   },
-
    // Адаптив
   breakpoints: {
     320: {
@@ -118,67 +83,6 @@ const swiper = new Swiper('.swiper', {
     }
   },
 });
-
-
-/* исчезание шапки при скроле */
-let lastScroll = 0;
-const defaultOffset = 150;//через сколько px при прокрутке вниз исчезает блок
-const header = document.querySelector('.header');
-
-const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
-const containHide = () => header.classList.contains('hide');
-window.addEventListener('scroll', () => {
-  if(scrollPosition() > lastScroll && !containHide() &&scrollPosition() > defaultOffset) {
-    header.classList.add('hide');
-  }
-  else if(scrollPosition() < lastScroll && containHide()){
-    header.classList.remove('hide');
-  }
-  lastScroll = scrollPosition();
-})
-
-/* бургер-меню */
-const iconMenu = document.querySelector('.navbar-toggler');
-if (iconMenu) {
-    const headerMenu = document.querySelector('.navbar');
-    iconMenu.addEventListener("click", function (e) {
-        document.body.classList.toggle('_lock');
-        iconMenu.classList.toggle('_active-burger-menu');
-        headerMenu.classList.toggle('_active-burger-menu');
-    })
-}
-
-/* плавное перемещение по документу при клике по ссылке */
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    const blockID = anchor.getAttribute('href')
-    document.querySelector('' + blockID).scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    })
-  })
-}
-
-
-/* открытие блока по клику в - questions-answers */
-let windowQuestionTitle = document.querySelectorAll('.window-question__title');
-for (let i = 0; i < windowQuestionTitle.length; i++) {
-  windowQuestionTitle[i].addEventListener('click', open_click);
-}
-
-function open_click(e) {
-e.preventDefault();
-let windowQuestionBody = this.closest('.window-question').querySelector('.window-question__body');
-setTimeout(function() {
-windowQuestionBody.style.display = window.getComputedStyle(windowQuestionBody).display === 'block' ? 'none' : 'block';
-e.target.classList.toggle('icon-vector-right_active');
-}, 120);
-}
-
-
 
 /* слайдеры в блоке - Наши маршруты */
 const OneSwiper = new Swiper('.swiper1', {
@@ -394,7 +298,77 @@ const ThreeSwiper = new Swiper('.swiper3', {
       },
     },
 });
+/* ---------------------------------------------------------------------------------------------------------------- */
+/* исчезание шапки при скроле */
+let lastScroll = 0;
+const defaultOffset = 150;//через сколько px при прокрутке вниз исчезает блок
+const header = document.querySelector('.header');
 
+const scrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const containHide = () => header.classList.contains('hide');
+window.addEventListener('scroll', () => {
+  if(scrollPosition() > lastScroll && !containHide() &&scrollPosition() > defaultOffset) {
+    header.classList.add('hide');
+  }
+  else if(scrollPosition() < lastScroll && containHide()){
+    header.classList.remove('hide');
+  }
+  lastScroll = scrollPosition();
+})
+
+/* бургер-меню */
+const iconMenu = document.querySelector('.header__burger-icon');
+const headerMenu = document.querySelector('.header__menu');
+if (iconMenu) {
+  iconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle('_lock');
+    iconMenu.classList.toggle('_active-burger-menu');
+    headerMenu.classList.toggle('_active-burger-menu');
+  })
+}
+
+/* плавное перемещение по документу при клике по ссылке */
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if(menuLinks.length > 0) {
+  menuLinks.forEach(menuLink => {
+    menuLink.addEventListener("click", onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+      const gotoBlock = document.querySelector(menuLink.dataset.goto);
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
+
+      if (iconMenu.classList.contains('_active-burger-menu')) {
+        document.body.classList.remove('_lock');
+        iconMenu.classList.remove('_active-burger-menu');
+        headerMenu.classList.remove('_active-burger-menu');
+      }
+
+      window.scrollTo({
+        top: gotoBlockValue,
+        behavior: "smooth"
+      });
+      e.preventDefault();
+    }
+  }
+}
+
+/* открытие блока по клику в - questions-answers */
+let windowQuestionTitle = document.querySelectorAll('.window-question__title');
+for (let i = 0; i < windowQuestionTitle.length; i++) {
+  windowQuestionTitle[i].addEventListener('click', open_click);
+}
+
+function open_click(e) {
+  e.preventDefault();
+  let windowQuestionBody = this.closest('.window-question').querySelector('.window-question__body');
+  setTimeout(function() {
+  windowQuestionBody.style.display = window.getComputedStyle(windowQuestionBody).display === 'block' ? 'none' : 'block';
+  e.target.classList.toggle('icon-vector-right_active');
+  }, 120);
+}
 
 /* PopUp-base */
 let btn = document.getElementById('btnPriсe');
@@ -445,6 +419,21 @@ function closePricePopup() {
     }, 100);
 }
 
+/* PopUp-call-back */
+// var btn = document.getElementById('CallBack');
+// var popUpWindowCallBack = document.getElementById('popUpWindowCallBack');
+// var btnClose = document.getElementById('btnClose');
+// btn.onclick = function () {
+//   popUpWindowCallBack.style.display = "block";
+// }
+// btnClose.onclick = function () {
+//   popUpWindowCallBack.style.display = "none";
+// }
+// window.onclick = function(e) {
+// if (event.target == popUpWindowCallBack) {
+//   popUpWindowCallBack.style.display = "none";
+// }
+// }
 
 /* input + - в popUp */
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
