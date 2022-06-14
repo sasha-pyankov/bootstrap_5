@@ -1,3 +1,8 @@
+/* Прелоадер */
+window.onload = function() {
+  let preloader = document.getElementById('preloader');
+  preloader.classList.add('hide-preloader');
+}
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* слайдер в блоке home-image */
 var myCarousel = document.querySelector('#carouselExampleSlidesOnly')
@@ -418,22 +423,6 @@ function closePricePopup() {
         document.body.classList.remove('_lock');
     }, 100);
 }
-
-/* PopUp-call-back */
-// var btn = document.getElementById('CallBack');
-// var popUpWindowCallBack = document.getElementById('popUpWindowCallBack');
-// var btnClose = document.getElementById('btnClose');
-// btn.onclick = function () {
-//   popUpWindowCallBack.style.display = "block";
-// }
-// btnClose.onclick = function () {
-//   popUpWindowCallBack.style.display = "none";
-// }
-// window.onclick = function(e) {
-// if (event.target == popUpWindowCallBack) {
-//   popUpWindowCallBack.style.display = "none";
-// }
-// }
 
 /* input + - в popUp */
 jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
