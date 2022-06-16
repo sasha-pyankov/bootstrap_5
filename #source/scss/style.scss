@@ -367,7 +367,7 @@ p,h1, h2, h3, h4,h5,h6{
 	transition: 0.4s ease-out;
 }
 
-/* ---------------------------------------------------------------------------------- */
+/* -------------------------------preloader--------------------------------------------- */
 $count: 5;
 $time: 1;
 .holder {
@@ -412,10 +412,22 @@ $time: 1;
     transform: translateX(-50%) translateY(-50%) scale(1.4);
   }
 }
-
 #preloader.hide-preloader {
+	animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
 	display: none;
 }
+
+@keyframes hidePreloader {
+	0% {
+	  opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+  }
 
 /* ---------------------------------------------------------------------------------- */
 .header {

@@ -2,7 +2,11 @@
 window.onload = function() {
   let preloader = document.getElementById('preloader');
   preloader.classList.add('hide-preloader');
+  setTimeout(function() {
+    preloader.classList.add('preloader-hidden');
+  },950)
 }
+
 /* ---------------------------------------------------------------------------------------------------------------- */
 /* слайдер в блоке home-image */
 var myCarousel = document.querySelector('#carouselExampleSlidesOnly')
@@ -10,7 +14,7 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 4000,
   // wrap: false
   touch: true,
-})
+}, 950)
 
 /* слайдер в блоке photo */
 const swiper = new Swiper('.swiper', {

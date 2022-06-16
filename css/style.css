@@ -438,7 +438,7 @@ p, h1, h2, h3, h4, h5, h6 {
   transition: 0.4s ease-out;
 }
 
-/* ---------------------------------------------------------------------------------- */
+/* -------------------------------preloader--------------------------------------------- */
 .holder {
   position: absolute;
   z-index: 50;
@@ -557,9 +557,31 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 #preloader.hide-preloader {
+  -webkit-animation: hidePreloader 1s;
+          animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
   display: none;
 }
 
+@-webkit-keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* ---------------------------------------------------------------------------------- */
 .header {
   width: 100%;
